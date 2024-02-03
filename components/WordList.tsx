@@ -18,7 +18,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       word.khmer.join("").includes(input?.replaceAll(" ", "") as string)
     );
     const pinyin = words.filter((word) =>
-      word.removeTone.includes(input?.replaceAll(" ", "") as string)
+      word.removeTone.toLowerCase().includes(input?.toLowerCase().replaceAll(" ", "") as string)
     );
     // console.log(chinese);
     if (chinese.length) {
