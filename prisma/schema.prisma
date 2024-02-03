@@ -1,0 +1,62 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+  USER
+}
+
+enum Gender {
+  MALE
+  FEMALE
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  username      String
+  email         String    @unique
+  verifiedEmail Boolean   @default(false)
+  role          Role      @default(USER)
+  gender        Gender?
+  dob           DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@unique([username, email])
+}
+
+model Hsk {
+  id         Int      @id @default(autoincrement())
+  chinese    String?  @default("")
+  removeTone String?  @default("")
+  khmer      String[]
+  pinyin     String[]
+  english    String[]
+  tag        String[]
+  hsk        String?  @default("")
+  modified   Boolean? @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Sentence {
+  id        Int      @id @default(autoincrement())
+  khmer     String   @default("")
+  chinese   String[]
+  pinyin    String[]
+  segment   Json
+  modified  Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
