@@ -47,8 +47,12 @@ export default async function WordDetail({
 
       <div className={`flex-1 flex overflow-y-auto`}>
         <div className={`flex w-full flex-col gap-2 px-4`}>
-          {sentences?.map((sentence: Sentence) => (
-            <ExampleItem sentence={sentence} chinese={word.chinese} />
+          {sentences?.map((sentence: Sentence, index: number) => (
+            <ExampleItem
+              key={index}
+              sentence={sentence}
+              chinese={word.chinese}
+            />
           ))}
         </div>
       </div>
