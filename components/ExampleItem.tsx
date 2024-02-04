@@ -10,7 +10,7 @@ export default async function ExampleItem({
   chinese: string;
 }) {
   return (
-    <div className={`bg-slate-400- py-2 px-2 border shadow-md rounded-md`}>
+    <div className={`py-2 px-2 border shadow-md rounded-md`}>
       <div className={`flex gap-2 justify-between`}>
         <div className={`w-fit flex flex-col gap-0`}>
           <PlayVoice
