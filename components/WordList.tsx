@@ -14,25 +14,26 @@ export default function WordList({ words }: { words: Hsk[] }) {
         .sify(word.chinese)
         .includes(chineseConv.sify(input?.replaceAll(" ", "") as string))
     );
+    const english = words.filter((word) =>
+      word.english.join("").includes(input?.replaceAll(" ", "") as string)
+    );
     const khmer = words.filter((word) =>
       word.khmer.join("").includes(input?.replaceAll(" ", "") as string)
     );
     const pinyin = words.filter((word) =>
-      word.removeTone.toLowerCase().includes(input?.toLowerCase().replaceAll(" ", "") as string)
+      word.removeTone
+        .toLowerCase()
+        .includes(input?.toLowerCase().replaceAll(" ", "") as string)
     );
-    // console.log(chinese);
     if (chinese.length) {
       return chinese;
+    } else if (english.length) {
+      return english;
     } else if (khmer.length) {
       return khmer;
     } else if (pinyin.length) {
       return pinyin;
     } else return [];
-
-    // esle{
-    //   return khmer ;
-
-    // }
   }, [words, input]);
 
   return (
@@ -40,7 +41,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       <div className={`h-fit`}>
         <Input
           className={`h-10 px-4 text-base placeholder:text-base`}
-          placeholder="ចិន,ខ្មែរ,ស្រៈប្រកប"
+          placeholder="ចិន,ខ្មែរ,អងក្លេស,ភីនអ៉ីន"
           onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
             setInput(event.target.value)
           }
@@ -51,7 +52,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
         <ul>
           {filterSearch.map((word) => (
             <Link key={word.id} href={`/dictionary/${word.id}`}>
-              <li className={`guoyu text-base py-2 px-4 border-b`}>
+              <li className={`guoyu text-xl py-2 px-4 border-b`}>
                 {word.chinese}
               </li>
             </Link>

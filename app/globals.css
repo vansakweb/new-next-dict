@@ -74,7 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
-body::-webkit-scrollbar {
+
+
+::-webkit-scrollbar {
   @apply hidden;
 }
 .mian{
@@ -91,7 +93,7 @@ body::-webkit-scrollbar {
 
 @font-face {
   font-family: pinyin;
-  src: url(../fonts/Source_Han_Sans_CN_ExtraLight.otf);
+  src: url(../fonts/Source_Han_Sans_CN_Light.otf);
 }
 .pinyin {
   font-family: "pinyin","battambang"

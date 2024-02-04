@@ -4,16 +4,16 @@ import HanziWriter from "hanzi-writer";
 import { useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
 
-export default function StrokeItem({ text }: { text: string }) {
+export default function StrokeItem({ hanzhi }: { hanzhi: string }) {
   const { theme } = useTheme();
 
   const strokeRef = useRef<null | HTMLDivElement>(null);
 
   useEffect(() => {
     const stroke: any = strokeRef.current;
-    const platStroke = (text: string) => {
+    const platStroke = (hanzhi: string) => {
       stroke.innerHTML = "";
-      var writer = HanziWriter.create(stroke, text, {
+      var writer = HanziWriter.create(stroke, hanzhi, {
         width: 150,
         height: 150,
         padding: 4,
@@ -25,8 +25,8 @@ export default function StrokeItem({ text }: { text: string }) {
       });
       writer.loopCharacterAnimation();
     };
-    platStroke(text);
-  }, [text, theme]);
+    platStroke(hanzhi);
+  }, [hanzhi, theme]);
 
   return (
     <div

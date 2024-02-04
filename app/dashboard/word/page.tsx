@@ -39,37 +39,39 @@ export default async function Word({
         <table className="w-full mx-auto">
           <thead className="bg-slate-300 dark:bg-slate-700">
             <tr>
-              <th className="w-1/12 py-4 pl-4 text-start">#</th>
-              <th className="w-2/12 py-4 px-2 text-start">ចិន</th>
-              <th className="w-5/12 py-4 px-2 text-start">ខ្មែរ</th>
-              <th className="w-3/12 py-4 px-2 text-start">ស្រៈប្រកប</th>
-              <th className="w-1/12 py-4 pr-4 text-end">មីនុយ</th>
+              <th className="w-1/12 py-4 pl-4 battambang text-start">#</th>
+              <th className="w-2/12 py-4 px-2 battambang text-start">ចិន</th>
+              <th className="w-5/12 py-4 px-2 battambang text-start">ខ្មែរ</th>
+              <th className="w-3/12 py-4 px-2 battambang text-start">
+                ស្រៈប្រកប
+              </th>
+              <th className="w-1/12 py-4 pr-4 battambang text-end">មីនុយ</th>
             </tr>
           </thead>
           <tbody>
             {words?.hsks.map((word: any, index: number) => (
               <tr
                 key={index}
-                className="border-b border-slate-600/20 odd:bg-slate-50 even:bg-slate-100 dark:odd:bg-slate-900 dark:even:bg-slate-800"
+                className="border-b border-slate-600/20 odd:bg-slate-50/20 even:bg-slate-100/50 dark:odd:bg-slate-900/20 dark:even:bg-slate-800/20"
               >
                 <th className={`w-1/12 py-3 pl-4 text-start pinyin`}>
                   {(currentPage - 1) * pageSize + index + 1}
                 </th>
-                <th className={`w-2/12 py-3 px-2 text-start guoyu`}>
+                <th className={`w-2/12 py-3 px-2 text-start guoyu text-lg`}>
                   {word.chinese}
                 </th>
                 <th className="w-5/12 py-2 px-2 text-start">
                   <div className="flex gap-1 items-center">
                     {word.khmer.map((item: string, index: number) => (
                       <Fragment key={index}>
-                        <p>{item}</p>
+                        <p className={`battambang`}>{item}</p>
                         {word.khmer.length - 1 > index && <span>|</span>}
                       </Fragment>
                     ))}
                   </div>
                 </th>
                 <th className="w-4/12 py-2 px-2 text-start">
-                  <div className={`flex gap-1 items-center pinyin`}>
+                  <div className={`flex gap-1 items-center pinyin text-sm`}>
                     {word.pinyin.map((item: string, index: number) => (
                       <Fragment key={index}>
                         <p>{item}</p>
@@ -81,12 +83,8 @@ export default async function Word({
                 <th className="w-1/12 py-3 pr-4 text-end">
                   <div className={`flex gap-1 justify-end`}>
                     <Link href={`/dashboard/word/edit/${word.id}`}>
-                      <Button
-                        className={`text-lg`}
-                        size={"icon"}
-                        variant={"outline"}
-                      >
-                        <CiEdit size={20} />
+                      <Button size={"icon"} variant={"ghost"}>
+                        <CiEdit size={20} className="text-blue-600" />
                       </Button>
                     </Link>
                     <DeleteWordButton wordId={word.id} />

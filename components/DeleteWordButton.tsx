@@ -19,12 +19,8 @@ export default function DeleteWordButton({ wordId }: { wordId: number }) {
   };
   return (
     <div>
-      <Button
-        size={"icon"}
-        variant={"destructive"}
-        onClick={() => handleDelete()}
-      >
-        <CiCircleRemove size={20} />
+      <Button size={"icon"} variant={"ghost"} onClick={() => handleDelete()}>
+        <CiCircleRemove size={20} className="text-red-600" />
       </Button>
     </div>
   );

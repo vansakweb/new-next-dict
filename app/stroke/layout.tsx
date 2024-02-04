@@ -1,12 +1,12 @@
 export const metadata = {
-  title: "User",
+  title: "Stroke",
   description: "中柬词典 | វចនានុក្រមចិនខ្មែរ",
 };
 
-export default function UserLayout({
+export default function StrokeLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <div>{children}</div>;
 }
