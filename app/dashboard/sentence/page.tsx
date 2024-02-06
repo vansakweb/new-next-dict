@@ -47,13 +47,13 @@ export default async function Sentence({
         <table className="w-full mx-auto">
           <thead className="bg-slate-300 dark:bg-slate-700">
             <tr>
-              <th className="w-1/12 py-4 pl-4 battambang text-start">#</th>
-              <th className="w-3/12 py-4 px-2 battambang text-start">ចិន</th>
-              <th className="w-4/12 py-4 px-2 battambang text-start">ខ្មែរ</th>
-              <th className="w-3/12 py-4 px-2 battambang text-start">
+              <th className="w-1/12 py-2 pl-4 battambang text-start">#</th>
+              <th className="w-3/12 py-2 px-2 battambang text-start">ចិន</th>
+              <th className="w-4/12 py-2 px-2 battambang text-start">ខ្មែរ</th>
+              <th className="w-3/12 py-2 px-2 battambang text-start">
                 ស្រៈប្រកប
               </th>
-              <th className="w-1/12 py-4 pr-4 battambang text-end">មីនុយ</th>
+              <th className="w-1/12 py-2 pr-4 battambang text-end">មីនុយ</th>
             </tr>
           </thead>
           <tbody>
@@ -62,20 +62,20 @@ export default async function Sentence({
                 key={index}
                 className="border-b border-slate-600/20 odd:bg-slate-50/20 even:bg-slate-100/50 dark:odd:bg-slate-900/20 dark:even:bg-slate-800/20"
               >
-                <th className={`w-1/12 py-3 pl-4 text-start pinyin`}>
+                <th className={`w-1/12 py-1 pl-4 text-start pinyin`}>
                   {(currentPage - 1) * pageSize + index + 1}
                 </th>
-                <th className={`w-3/12 py-3 px-2 text-start guoyu text-lg`}>
+                <th className={`w-3/12 py-1 px-2 text-start guoyu text-lg`}>
                   {sentence.chinese}
                 </th>
-                <th className="w-4/12 py-3 px-2 battambang text-start">
+                <th className="w-4/12 py-1 px-2 battambang text-start">
                   {sentence.khmer}
                 </th>
 
-                <th className={`w-3/12 py-3 px-2 text-start pinyin text-sm`}>
+                <th className={`w-3/12 py-1 px-2 text-start pinyin text-sm`}>
                   {sentence.pinyin}
                 </th>
-                <th className="w-1/12 py-3 pr-4 text-end">
+                <th className="w-1/12 py-1 pr-4 text-end">
                   <div className={`flex gap-1 justify-end`}>
                     <Link href={`/dashboard/sentence/edit/${sentence.id}`}>
                       <Button size={"icon"} variant={"ghost"}>

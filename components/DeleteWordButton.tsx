@@ -3,7 +3,29 @@ import { CiCircleRemove } from "react-icons/ci";
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
 
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+
 export default function DeleteWordButton({ wordId }: { wordId: number }) {
+  return (
+    <div>
+      <Button size={"icon"} variant={"ghost"}>
+        <AlertDialogDemo wordId={wordId} />
+      </Button>
+    </div>
+  );
+}
+
+export function AlertDialogDemo({ wordId }: { wordId: number }) {
   const router = useRouter();
 
   const handleDelete = async () => {
@@ -18,10 +40,28 @@ export default function DeleteWordButton({ wordId }: { wordId: number }) {
     }
   };
   return (
-    <div>
-      <Button size={"icon"} variant={"ghost"} onClick={() => handleDelete()}>
-        <CiCircleRemove size={20} className="text-red-600" />
-      </Button>
-    </div>
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="ghost" size={"icon"}>
+          <CiCircleRemove size={20} className="text-red-600" />
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>តើអ្នកប្រាកដថានឹងលុបមែនទេ?</AlertDialogTitle>
+          <AlertDialogDescription>
+            លុបឃ្លាពាក្យចេញពីតារាង។
+            ពាក្យនេះនឹងត្រូវលុបចេញពីទិន្នន័យក្រោយពេលអ្នកចុច &quot;យល់ព្រម&quot;
+            !
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel className="text-lg">បដិសេធ</AlertDialogCancel>
+          <AlertDialogAction onClick={() => handleDelete()} className="text-lg">
+            យល់ព្រម
+          </AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
   );
 }

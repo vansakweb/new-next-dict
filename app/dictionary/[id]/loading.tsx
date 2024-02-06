@@ -1,6 +1,6 @@
 export default function loading() {
   return (
-    <section className="h-full flex flex-col">
+    <section className="h-full flex flex-col w-full md:w-9/12">
       <div className="h-36 px-4 w-full flex-justify-center-items-center animate-pulse">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">

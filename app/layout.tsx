@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
-import { ThemeProvider } from "@/provider/Providers";
+import Providers from "@/provider/Providers";
 
 export const metadata: Metadata = {
   title: "CH KH DICT",
@@ -16,15 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`battambang`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          // disableTransitionOnChange
-        >
+        <Providers>
           <Navbar />
           {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );

@@ -32,7 +32,7 @@ export default function DictionaryLoading() {
           </div>
         </div>
         <div className="h-full w-9/12 flex-1 flex justify-center items-center">
-          <h2>Loading...</h2>
+          <h2 className="pinyin">Loading...</h2>
         </div>
       </div>
     </section>

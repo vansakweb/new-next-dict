@@ -4,12 +4,14 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "assets.example.com",
+        hostname: "ch-kh-dict-doc.vercel.app",
         port: "",
-        pathname: "/account123/**",
+        pathname: "/document/**",
       },
     ],
   },
 };
 
 module.exports = nextConfig;
+
+// https://ch-kh-dict-doc.vercel.app

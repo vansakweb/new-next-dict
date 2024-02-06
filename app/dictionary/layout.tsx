@@ -12,12 +12,11 @@ export default async function DictionaryLayout({
   const words: Hsk[] = res?.hsks;
 
   return (
-    <div className="max-w-screen-xl mian py-4 flex mx-auto">
+    <div className="max-w-screen-xl mian py-4 px-2 flex gap-4 mx-auto">
       <Suspense fallback={<DictionaryLoading />}>
-        <div className="w-3/12">
-          <WordList words={words} />
-        </div>
-        <div className={`w-9/12 h-full`}>{children}</div>
+        <WordList words={words} />
+
+        {children}
       </Suspense>
     </div>
   );

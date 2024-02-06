@@ -19,7 +19,7 @@ export async function generateMetadata(
     ${word?.english[0]}`,
     // description: `${word?.chinese}:${word?.pinyin} \n ${word?.khmer} \n ${word?.english} `,
     openGraph: {
-      images: ["/favicon.png", ...previousImages],
+      images: ["favicon.png", ...previousImages],
     },
   };
 }

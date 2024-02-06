@@ -110,7 +110,11 @@ export default function Converter() {
             ))}
           </RadioGroup>
         </div>
-        <Button className={`text-lg battambang`} onClick={copy}>
+        <Button
+          variant={"secondary"}
+          className={`text-lg battambang`}
+          onClick={copy}
+        >
           ចម្លង
         </Button>
       </div>
