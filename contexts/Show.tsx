@@ -6,7 +6,7 @@ interface Context {
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
 }
-export const ShowContext = createContext<Context>();
+export const ShowContext = createContext<Context | null>(null);
 
 export function ShowWrapper({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
