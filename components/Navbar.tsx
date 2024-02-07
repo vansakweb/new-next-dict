@@ -20,10 +20,10 @@ const menus = [
     title: "បំលែងអក្សរ",
     path: "/converter",
   },
-  {
-    title: "ផ្ទាំងគ្រប់គ្រង",
-    path: "/dashboard",
-  },
+  // {
+  //   title: "ផ្ទាំងគ្រប់គ្រង",
+  //   path: "/dashboard",
+  // },
   {
     title: "អំពីវេបសាយ",
     path: "/about",
@@ -38,10 +38,12 @@ export default function Navbar() {
       >
         <p className={`text-lg guoyu`}>{"中柬词典"}</p>
         <div className={`hidden md:flex gap-3`}>
-          <ModeToggle />
+          <div className="hidden lg:block">
+            <ModeToggle />
+          </div>
           <MenuButton menus={menus} />
         </div>
-        <div className={`hidden md:block`}>
+        <div className={`hidden lg:block pinyin`}>
           <ProfileButton />
         </div>
         <div className={`md:hidden`}>
