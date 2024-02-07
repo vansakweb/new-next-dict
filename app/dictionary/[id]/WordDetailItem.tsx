@@ -1,12 +1,11 @@
 "use client";
 import WordDetail from "@/components/WordDetail";
 import ExampleItem from "@/components/ExampleItem";
-import { ShowContext } from "@/contexts/Show";
-import { useContext, useEffect } from "react";
+import { useShowContext } from "@/contexts/Show";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 import { IoIosArrowBack } from "react-icons/io";
-import Link from "next/link";
 
 export default function WordDetailItem({
   word,
@@ -15,7 +14,7 @@ export default function WordDetailItem({
   word: Hsk;
   sentences: Sentence[];
 }) {
-  const { show, setShow } = useContext(ShowContext);
+  const { show, setShow } = useShowContext();
 
   useEffect(() => {
     if (!word) {

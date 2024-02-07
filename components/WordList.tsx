@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
 import { Input } from "./ui/input";
-import { useContext, useMemo, useState } from "react";
-import { ShowContext } from "@/contexts/Show";
+import { useMemo, useState } from "react";
+import { useShowContext } from "@/contexts/Show";
 var chineseConv = require("chinese-conv");
 
 export default function WordList({ words }: { words: Hsk[] }) {
   // console.log(words?.length);
-  const { show, setShow } = useContext(ShowContext);
+  const { show, setShow } = useShowContext();
   const [input, setInput] = useState<string | undefined>("");
   const filterSearch = useMemo(() => {
     const chinese = words.filter((word) =>
