@@ -1,12 +1,14 @@
 "use client";
 
 import { Dispatch, SetStateAction, createContext, useState } from "react";
-
-interface Context {
-  show: boolean;
-  setShow: Dispatch<SetStateAction<boolean>>;
-}
-export const ShowContext = createContext<Context | null>(null);
+// interface State {
+//   show: boolean;
+// }
+// type Context = {
+//   show: State;
+//   setShow: Dispatch<SetStateAction<boolean>>;
+// };
+export const ShowContext = createContext<any>(false);
 
 export function ShowWrapper({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
