@@ -7,7 +7,7 @@ interface User {
 interface Hsk {
   id: number;
   chinese: string;
-  removeTone: string;
+  notone: string;
   khmer: string[];
   pinyin: string[];
   english: string[];

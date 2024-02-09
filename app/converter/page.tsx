@@ -62,8 +62,8 @@ export default function Converter() {
   }, [menu, input]);
 
   return (
-    <div className="h-main p-1 scrollbar-hide flex-1 overflow-y-auto px-2 sm:px-8 md:px-16 lg:px-32">
-      <div className="mt-10">
+    <section className="h-full overflow-y-auto">
+      <div className="">
         <Label htmlFor="input" className={`text-lg battambang`}>
           កម្មវិធីបម្លែងអក្សរ
         </Label>
@@ -118,6 +118,6 @@ export default function Converter() {
           ចម្លង
         </Button>
       </div>
-    </div>
+    </section>
   );
 }

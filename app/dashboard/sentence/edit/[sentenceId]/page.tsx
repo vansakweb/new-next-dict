@@ -15,5 +15,5 @@ export default async function EditSentence({
       </div>
     );
   }
-  return <div>{<EditSentenceForm sentence={data} />}</div>;
+  return <section>{<EditSentenceForm sentence={data} />}</section>;
 }

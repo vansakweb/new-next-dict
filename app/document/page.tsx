@@ -11,8 +11,8 @@ export default async function Document() {
   const documents = await fetchData();
 
   return (
-    <section className="h-full overflow-y-auto flex flex-col flex-1 px-2 sm:px-8 md:px-16 lg:px-32 transition-all">
-      <div className=" pb-4 mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-2 gap-y-4">
+    <section className="h-full overflow-y-auto flex flex-col flex-1">
+      <div className=" pb-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-x-2 gap-y-4">
         {documents.map((item: any, index: number) => (
           <Link
             target="_blank"

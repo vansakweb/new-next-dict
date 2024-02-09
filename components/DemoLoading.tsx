@@ -1,6 +1,6 @@
-export default function loading() {
+export default function DemoLoading() {
   return (
-    <section className="h-full flex flex-col w-full md:w-9/12">
+    <section className="h-full flex flex-1 flex-col w-full md:w-9/12">
       <div className="h-36 px-4 w-full flex-justify-center-items-center animate-pulse">
         <div className="flex flex-col gap-4">
           <div className="flex gap-4">

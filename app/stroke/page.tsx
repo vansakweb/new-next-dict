@@ -17,25 +17,23 @@ export default function StrokPage() {
   };
 
   return (
-    <main className={`min-h-screen- px-8 guoyu`}>
-      <div
-        className={`max-w-screen-xl mian flex flex-col sm:flex-row justify-between mx-auto`}
-      >
-        <div className="w-full sm:w-3/12 gap-2 space-y-4 p-4 h-fit">
-          <Input
-            value={inputText}
-            onChange={(event) => filterInput(event.target.value)}
-            className={`h-10 w-full text-base placeholder:text-base`}
-            placeholder="ចិន"
-          />
-          {uniqeTextArray && inputText && <Stroke hanzhis={uniqeTextArray} />}
-        </div>
-        <div
-          className={`w-full sm:w-9/12 space-y-4 p-4 flex-1 overflow-auto sm:overscroll-none`}
-        >
-          {uniqeTextArray && inputText && <Bihua hanzhis={uniqeTextArray} />}
-        </div>
+    <section
+      className={`h-full flex flex-col gap-4 sm:flex-row justify-between guoyu`}
+    >
+      <div className="w-full sm:w-3/12 gap-2 space-y-4 h-fit">
+        <Input
+          value={inputText}
+          onChange={(event) => filterInput(event.target.value)}
+          className={`h-10 w-full text-base placeholder:text-base`}
+          placeholder="ចិន"
+        />
+        {uniqeTextArray && inputText && <Stroke hanzhis={uniqeTextArray} />}
       </div>
-    </main>
+      <div
+        className={`w-full sm:w-9/12 space-y-4 flex-1 overflow-auto sm:overscroll-none`}
+      >
+        {uniqeTextArray && inputText && <Bihua hanzhis={uniqeTextArray} />}
+      </div>
+    </section>
   );
 }

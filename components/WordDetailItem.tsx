@@ -28,7 +28,7 @@ export default function WordDetailItem({
     <div
       className={`${
         show ? "flex w-full md:w-9/12" : "hidden md:flex md:w-9/12"
-      } h-full flex-col relative`}
+      } h-full md:pl-4 flex-col relative`}
     >
       <div className="absolute left-0 md:hidden">
         <Button size={"icon"} variant={"ghost"} onClick={() => setShow(false)}>

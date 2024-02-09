@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 import { Fragment } from "react";
 
 export default function WordDetail({ word }: { word: Hsk }) {
+  console.log(word);
+
   return (
     <div className={``}>
       <div className={`flex justify-center items-center`}>
@@ -31,11 +33,11 @@ export default function WordDetail({ word }: { word: Hsk }) {
         </div>
         <PlayVoice text={word?.chinese as string} />
       </div>
-      <div
-        className={`w-full flex flex-nowrap gap-2 items-center overflow-auto py-2`}
-      >
-        {word.khmer &&
-          word?.khmer?.map(
+      {word?.khmer.length > 0 && (
+        <div
+          className={`w-full  flex flex-nowrap gap-2 items-center overflow-auto py-2`}
+        >
+          {word?.khmer?.map(
             (item, index) =>
               item && (
                 <Fragment key={index}>
@@ -49,12 +51,13 @@ export default function WordDetail({ word }: { word: Hsk }) {
                 </Fragment>
               )
           )}
-      </div>
-      <div
-        className={`w-full flex flex-nowrap gap-2 items-center overflow-auto py-2`}
-      >
-        {word.english &&
-          word?.english?.map(
+        </div>
+      )}
+      {word.english.length > 0 && (
+        <div
+          className={`w-full flex flex-nowrap gap-2 items-center overflow-auto py-2`}
+        >
+          {word?.english?.map(
             (item, index) =>
               item && (
                 <Fragment key={index}>
@@ -68,7 +71,8 @@ export default function WordDetail({ word }: { word: Hsk }) {
                 </Fragment>
               )
           )}
-      </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -2,7 +2,7 @@ export default function DictionaryLoading() {
   return (
     <section className="overflow-hidden flex flex-col flex-1 transition-all animate-pulse">
       <div className="flex h-full">
-        <div className="h-full w-3/12 animate-pulse">
+        <div className="h-full w-full md:w-3/12 animate-pulse">
           <div className={`h-full flex-col flex`}>
             <div className="h-fit flex justify-center items-center px-4">
               <div className="h-10 w-full bg-slate-200 dark:bg-slate-800 rounded-md border" />
@@ -31,7 +31,7 @@ export default function DictionaryLoading() {
             </div>
           </div>
         </div>
-        <div className="h-full w-9/12 flex-1 flex justify-center items-center">
+        <div className="h-full hidden md:w-9/12 flex-1 md:flex justify-center items-center">
           <h2 className="pinyin">Loading...</h2>
         </div>
       </div>

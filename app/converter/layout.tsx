@@ -8,5 +8,7 @@ export default function ConverterLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="">{children}</div>;
+  return (
+    <div className="max-w-screen-xl mian py-4 px-2 mx-auto">{children}</div>
+  );
 }

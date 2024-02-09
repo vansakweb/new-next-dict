@@ -60,8 +60,8 @@ export function AlertDialogDemo({ sentenceId }: { sentenceId: number }) {
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
-          <AlertDialogCancel className="text-lg">បដិសេធ</AlertDialogCancel>
-          <AlertDialogAction onClick={() => handleDelete()} className="text-lg">
+          <AlertDialogCancel className="">បដិសេធ</AlertDialogCancel>
+          <AlertDialogAction onClick={() => handleDelete()} className="">
             យល់ព្រម
           </AlertDialogAction>
         </AlertDialogFooter>

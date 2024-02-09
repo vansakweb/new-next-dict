@@ -1,5 +1,6 @@
 import { hsk } from "@/lib/data";
 import type { Metadata, ResolvingMetadata } from "next";
+import { Fragment } from "react";
 
 type Props = {
   params: { id: string };
@@ -24,12 +25,10 @@ export async function generateMetadata(
   };
 }
 
-
-
 export default async function DictionaryLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <Fragment>{children}</Fragment>;
 }

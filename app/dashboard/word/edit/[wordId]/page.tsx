@@ -16,8 +16,8 @@ export default async function EditWord({
     );
   }
   return (
-    <div>
+    <section>
       <EditWordForm word={data} />
-    </div>
+    </section>
   );
 }

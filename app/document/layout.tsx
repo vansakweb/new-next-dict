@@ -8,5 +8,5 @@ export default function DocumentLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (<div className="max-w-screen-xl mian py-4 px-2 mx-auto">{children}</div>)
 }

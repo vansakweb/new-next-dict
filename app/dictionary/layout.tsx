@@ -1,6 +1,6 @@
 import DictionaryLoading from "@/components/DictionaryLoading";
 import WordList from "@/components/WordList";
-import { Suspense } from "react";
+import { Fragment, Suspense } from "react";
 import { hsk } from "@/lib/data";
 
 export default async function DictionaryLayout({
@@ -12,12 +12,11 @@ export default async function DictionaryLayout({
   const words: Hsk[] = res?.hsks;
 
   return (
-    <div className="max-w-screen-xl mian py-4 px-2 flex gap-4 mx-auto">
+    <div className="max-w-screen-xl mian py-4 px-2 flex mx-auto">
       <Suspense fallback={<DictionaryLoading />}>
         <WordList words={words} />
-
-        {children}
       </Suspense>
+      <Fragment>{children}</Fragment>
     </div>
   );
 }

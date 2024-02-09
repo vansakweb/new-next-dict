@@ -8,5 +8,7 @@ export default function StrokeLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div>{children}</div>;
+  return (
+    <div className="max-w-screen-xl mian py-4 px-2 mx-auto">{children}</div>
+  );
 }

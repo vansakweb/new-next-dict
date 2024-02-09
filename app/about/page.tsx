@@ -7,7 +7,7 @@ const moul = Moul({ subsets: ["khmer"], weight: "400" });
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen px-8">
+    <section className="h-full overflow-y-auto">
       <div className={`battambang`}>
         {/*  */}
         <div>
@@ -91,6 +91,6 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 }

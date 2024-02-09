@@ -22,7 +22,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       word.khmer.join("").includes(input?.replaceAll(" ", "") as string)
     );
     const pinyin = words.filter((word) =>
-      word.removeTone
+      word.notone
         .toLowerCase()
         .includes(input?.toLowerCase().replaceAll(" ", "") as string)
     );
@@ -44,7 +44,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       <div className={`h-full flex flex-col gap-2 guoyu`}>
         <div className={`h-fit`}>
           <Input
-            className={`h-10 px-4 text-base placeholder:text-base`}
+            className={`h-10 text-base placeholder:text-base`}
             placeholder="ចិន,ខ្មែរ,អងក្លេស,ភីនអ៉ីន"
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               setInput(event.target.value)

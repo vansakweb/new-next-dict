@@ -20,10 +20,10 @@ const menus = [
     title: "បំលែងអក្សរ",
     path: "/converter",
   },
-  // {
-  //   title: "ផ្ទាំងគ្រប់គ្រង",
-  //   path: "/dashboard",
-  // },
+  {
+    title: "ផ្ទាំងគ្រប់គ្រង",
+    path: "/dashboard",
+  },
   {
     title: "អំពីវេបសាយ",
     path: "/about",
@@ -32,9 +32,9 @@ const menus = [
 
 export default function Navbar() {
   return (
-    <div className={`sticky z-50 top-0 px-8 bg-slate-300 dark:bg-slate-700`}>
+    <div className={`sticky z-50 top-0 bg-slate-300 dark:bg-slate-700`}>
       <div
-        className={`max-w-screen-xl h-16 flex justify-between items-center mx-auto`}
+        className={`max-w-screen-xl h-16 px-2 flex justify-between items-center mx-auto`}
       >
         <p className={`text-lg guoyu`}>{"中柬词典"}</p>
         <div className={`hidden md:flex gap-3`}>

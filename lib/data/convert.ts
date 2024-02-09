@@ -7,8 +7,8 @@ import words from "@/lib/hsk.json";
 const convert = () => {
   const converted = words.slice(0, 1000000).map((word) => ({
     chinese: word.chinese,
-    removeTone: pinyin(word.chinese, {
-      removeTone: true,
+    notone: pinyin(word.chinese, {
+      notone: true,
       removeSpace: true,
     }),
     khmer: word.khmer,

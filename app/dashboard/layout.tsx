@@ -11,8 +11,8 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-full flex flex-col flex-1 px-1 sm:px-2 xl:px-4 2xl:px-16 transition-all">
-      <div className={`py-4`}>
+    <div className="max-w-screen-xl mian py-4 px-2 mx-auto flex-1 flex flex-col">
+      <div className={`pb-4`}>
         <DashboardMenu />
       </div>
       <div className="flex-1">{children}</div>
