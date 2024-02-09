@@ -15,7 +15,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-export default function DeleteSentenceButton({
+export default function DeleteSentenceBtn({
   sentenceId,
 }: {
   sentenceId: number;
@@ -47,7 +47,7 @@ export function AlertDialogDemo({ sentenceId }: { sentenceId: number }) {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="ghost" size={"icon"}>
-          <CiCircleRemove size={20} className="text-red-600" />
+          <CiCircleRemove size={20} className="text-red-500" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

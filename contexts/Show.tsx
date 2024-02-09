@@ -19,7 +19,7 @@ export const ShowContext = createContext<Context>({
 
 export function ShowWrapper({ children }: { children: React.ReactNode }) {
   const [show, setShow] = useState<boolean>(false);
-  console.log(show);
+  // console.log(show);
 
   return (
     <ShowContext.Provider value={{ show, setShow }}>

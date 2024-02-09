@@ -1,6 +1,7 @@
-import PlayVoice from "@/components/PlayVoice";
-import CopyText from "@/components/CopyText";
-import AddBookmark from "./AddBookmark";
+import PlayVoiceBtn from "@/components/BTN/PlayVoiceBtn";
+import CopyTextBtn from "@/components/BTN/CopyTextBtn";
+import AddBookmarkBtn from "./BTN/AddBookmarkBtn";
+import EditSentenceBtn from "./BTN/EditSentenceBtn";
 
 export default async function ExampleItem({
   sentence,
@@ -13,18 +14,21 @@ export default async function ExampleItem({
     <div className={`py-2 px-2 border shadow-md rounded-md`}>
       <div className={`flex gap-2 justify-between`}>
         <div className={`w-fit flex flex-col gap-0`}>
-          <PlayVoice
+          <PlayVoiceBtn
             text={sentence.segment.map((seg) => seg.chinese).join("")}
           />
-          <CopyText
+          <CopyTextBtn
             text={sentence.segment.map((seg) => seg.chinese).join("")}
           />
-          <AddBookmark
+          {/* <AddBookmarkBtn
             text={sentence.segment.map((seg) => seg.chinese).join("")}
-          />
+          /> */}
+          <EditSentenceBtn sentenceId={sentence.id} />
         </div>
         <div className={`flex-1 flex flex-col gap-4 justify-center`}>
-          <p className={`text-lg battambang`}>{sentence.khmer}</p>
+          <p className={`battambang text-lg text-violet-500`}>
+            {sentence.khmer}
+          </p>
           <div className={`flex gap-0.5`}>
             {sentence?.segment.map((seg: any, index: number) => (
               <div
@@ -41,8 +45,8 @@ export default async function ExampleItem({
                     : " items-center"
                 }`}
               >
-                <p className={`pinyin text-sm`}>{seg.pinyin}</p>
-                <p className={`guoyu text-xl`}>{seg.chinese}</p>
+                <p className={`pinyin text-sm text-blue-500`}>{seg.pinyin}</p>
+                <p className={`guoyu text-xl text-green-500`}>{seg.chinese}</p>
               </div>
             ))}
           </div>

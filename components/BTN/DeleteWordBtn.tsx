@@ -15,7 +15,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-export default function DeleteWordButton({ wordId }: { wordId: number }) {
+export default function DeleteWordBtn({ wordId }: { wordId: number }) {
   return (
     <div>
       <Button size={"icon"} variant={"ghost"}>
@@ -43,7 +43,7 @@ export function AlertDialogDemo({ wordId }: { wordId: number }) {
     <AlertDialog>
       <AlertDialogTrigger asChild>
         <Button variant="ghost" size={"icon"}>
-          <CiCircleRemove size={20} className="text-red-600" />
+          <CiCircleRemove size={20} className="text-red-500" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

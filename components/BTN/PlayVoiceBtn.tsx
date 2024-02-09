@@ -1,9 +1,9 @@
 "use client";
 
 import { CiVolumeHigh } from "react-icons/ci";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 
-export default function PlayVoice({ text }: { text: string }) {
+export default function PlayVoiceBtn({ text }: { text: string }) {
   const playVice = () => {
     window.speechSynthesis.cancel();
     const speechMsg = new SpeechSynthesisUtterance();
@@ -15,7 +15,7 @@ export default function PlayVoice({ text }: { text: string }) {
   return (
     <Button size={"icon"} variant={"ghost"}>
       <span onClick={() => playVice()}>
-        <CiVolumeHigh size={20} />
+        <CiVolumeHigh size={20} className="text-fuchsia-500" />
       </span>
     </Button>
   );

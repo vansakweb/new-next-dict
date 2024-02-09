@@ -26,15 +26,21 @@ export default function WordList({ words }: { words: Hsk[] }) {
         .toLowerCase()
         .includes(input?.toLowerCase().replaceAll(" ", "") as string)
     );
-    if (chinese.length) {
-      return chinese;
-    } else if (english.length) {
-      return english;
-    } else if (khmer.length) {
-      return khmer;
-    } else if (pinyin.length) {
-      return pinyin;
-    } else return [];
+
+    const allDetaToShow = [...chinese, ...english, ...khmer, ...pinyin];
+
+    // @ts-ignore
+    return [...new Set(allDetaToShow)] || [];
+
+    // if (chinese.length) {
+    //   return chinese;
+    // } else if (english.length) {
+    //   return english;
+    // } else if (khmer.length) {
+    //   return khmer;
+    // } else if (pinyin.length) {
+    //   return pinyin;
+    // } else return [];
   }, [words, input]);
 
   return (
@@ -60,7 +66,9 @@ export default function WordList({ words }: { words: Hsk[] }) {
                 key={word.id}
                 href={`/dictionary/${word.id}`}
               >
-                <li className={`guoyu text-xl py-2 px-4 border-b`}>
+                <li
+                  className={`guoyu text-xl py-2 px-4 border-b text-purple-500`}
+                >
                   {word.chinese}
                 </li>
               </Link>
