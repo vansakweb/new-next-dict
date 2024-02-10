@@ -1,10 +1,8 @@
 import { hsk } from "@/lib/data";
 import { sentence } from "@/lib/data";
-// import WordDetail from "@/components/WordDetail";
-// import ExampleItem from "@/components/ExampleItem";
-import WordDetailItem from "../../../components/WordDetailItem";
 import { Fragment, Suspense } from "react";
 import DemoLoading from "@/components/DemoLoading";
+import WordDetail from "@/components/WordDetail";
 
 export default async function Word({ params }: { params: { id: number } }) {
   const word: Hsk = await hsk.one(Number(params.id));
@@ -16,7 +14,7 @@ export default async function Word({ params }: { params: { id: number } }) {
     <Fragment>
       <Suspense fallback={<DemoLoading />}>
         {/* <DemoLoading /> */}
-        <WordDetailItem word={word} sentences={sentences} />
+        <WordDetail word={word} sentences={sentences} />
       </Suspense>
     </Fragment>
   );

@@ -50,7 +50,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       <div className={`h-full flex flex-col gap-2 guoyu`}>
         <div className={`h-fit`}>
           <Input
-            className={`h-10 text-base placeholder:text-base`}
+            className={`h-10 text-xl placeholder:text-base text-violet-500`}
             placeholder="ចិន,ខ្មែរ,អងក្លេស,ភីនអ៉ីន"
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               setInput(event.target.value)
@@ -67,7 +67,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
                 href={`/dictionary/${word.id}`}
               >
                 <li
-                  className={`guoyu text-xl py-2 px-4 border-b text-purple-500`}
+                  className={`guoyu text-xl py-2 px-4 border-b text-violet-500`}
                 >
                   {word.chinese}
                 </li>

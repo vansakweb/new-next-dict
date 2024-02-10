@@ -33,7 +33,9 @@ export default async function Document() {
                   className="h-full w-full object-center group-hover:scale-105 transition duration-500 ease-in-out"
                 />
               </div>
-              <p className="flex-1 guoyu text-xl">{item?.title}</p>
+              <p className="flex-1 guoyu text-lg text-violet-500">
+                {item?.title}
+              </p>
             </div>
           </Link>
         ))}

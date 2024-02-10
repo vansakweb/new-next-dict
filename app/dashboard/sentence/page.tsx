@@ -5,7 +5,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { CiEdit } from "react-icons/ci";
-import DeleteSentenceButton from "@/components/BTN/DeleteSentenceBtn";
+import DeleteSentenceButton from "@/components/btn/DeleteSentenceBtn";
 
 interface User {
   id: number;
@@ -116,9 +116,9 @@ export default async function Sentence({
                     </Link>
                   </div>
                   <div>
-                    <Button variant={"ghost"} className={`text-lg pinyin`}>
+                    <span className={`pinyin`}>
                       {currentPage}/{allPage}
-                    </Button>
+                    </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <Link

@@ -1,9 +1,9 @@
-import PlayVoiceBtn from "@/components/BTN/PlayVoiceBtn";
-import CopyTextBtn from "@/components/BTN/CopyTextBtn";
-import AddBookmarkBtn from "./BTN/AddBookmarkBtn";
-import EditSentenceBtn from "./BTN/EditSentenceBtn";
+import PlayVoiceBtn from "@/components/btn/PlayVoiceBtn";
+import CopyTextBtn from "@/components/btn/CopyTextBtn";
+import EditSentenceBtn from "./btn/EditSentenceBtn";
+import ToggleSentenceBookMark from "./btn/ToggleSentenceBookMark";
 
-export default async function ExampleItem({
+export default function ExampleItem({
   sentence,
   chinese,
 }: {
@@ -11,31 +11,35 @@ export default async function ExampleItem({
   chinese: string;
 }) {
   return (
-    <div className={`py-2 px-2 border shadow-md rounded-md`}>
-      <div className={`flex gap-2 justify-between`}>
-        <div className={`w-fit flex flex-col gap-0`}>
+    <div className={`h-fit`}>
+      <div
+        className={`pr-2 flex gap-2 justify-between border shadow-md rounded-md overflow-hidden`}
+      >
+        <div
+          className={`w-fit p-1 flex flex-col gap-0 bg-slate-100 dark:bg-slate-900`}
+        >
           <PlayVoiceBtn
             text={sentence.segment.map((seg) => seg.chinese).join("")}
           />
           <CopyTextBtn
             text={sentence.segment.map((seg) => seg.chinese).join("")}
           />
-          {/* <AddBookmarkBtn
-            text={sentence.segment.map((seg) => seg.chinese).join("")}
-          /> */}
-          <EditSentenceBtn sentenceId={sentence.id} />
+          <ToggleSentenceBookMark sentence={sentence} />
+          {/* <EditSentenceBtn sentenceId={sentence.id as number} /> */}
         </div>
-        <div className={`flex-1 flex flex-col gap-4 justify-center`}>
-          <p className={`battambang text-lg text-violet-500`}>
+        <div
+          className={`flex-1 flex flex-col gap-4 justify-center overflow-x-auto`}
+        >
+          <p className={`battambang text-lg text-blue-500 text-nowrap`}>
             {sentence.khmer}
           </p>
-          <div className={`flex gap-0.5`}>
+          <div className={`flex gap-1`}>
             {sentence?.segment.map((seg: any, index: number) => (
               <div
                 key={index}
-                className={`flex flex-col gap-2 px-2 justify-between hover:bg-slate-200 dark:hover:bg-slate-800 rounded-md ${
+                className={`flex flex-col justify-between -hover:bg-slate-200 -dark:hover:bg-slate-800 rounded-md ${
                   seg.chinese == chinese
-                    ? "bg-slate-100 dark:bg-slate-900"
+                    ? "bg-slate-100 dark:bg-slate-900 px-1"
                     : "dark:bg-slate-950"
                 } ${
                   index == 0
@@ -45,8 +49,12 @@ export default async function ExampleItem({
                     : " items-center"
                 }`}
               >
-                <p className={`pinyin text-sm text-blue-500`}>{seg.pinyin}</p>
-                <p className={`guoyu text-xl text-green-500`}>{seg.chinese}</p>
+                <p className={`pinyin text-sm text-orange-500 text-nowrap`}>
+                  {seg.pinyin}
+                </p>
+                <p className={`guoyu text-xl text-violet-500 text-nowrap`}>
+                  {seg.chinese}
+                </p>
               </div>
             ))}
           </div>

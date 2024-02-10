@@ -63,7 +63,7 @@ export default function Converter() {
 
   return (
     <section className="h-full overflow-y-auto">
-      <div className="">
+      <div className="px-1">
         <Label htmlFor="input" className={`text-lg battambang`}>
           កម្មវិធីបម្លែងអក្សរ
         </Label>

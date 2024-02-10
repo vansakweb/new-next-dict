@@ -3,6 +3,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 import {
+  Bookmark,
   Cloud,
   CreditCard,
   Github,
@@ -33,6 +34,7 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import Link from "next/link";
 
 export default function ProfileButton() {
   return (
@@ -70,6 +72,18 @@ export function DropdownMenuDemo() {
             <span>Settings</span>
             <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
           </DropdownMenuItem>
+          {/* My */}
+          <DropdownMenuItem>
+            <Bookmark className="mr-2 h-4 w-4" />
+            <Link href={`/bookmark/sentence`}>ប្រយោគរក្សាទុក</Link>
+            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+          </DropdownMenuItem>
+          <DropdownMenuItem>
+            <Bookmark className="mr-2 h-4 w-4" />
+            <Link href={`/bookmark/word`}>ពាក្យរក្សាទុក</Link>
+            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
+          </DropdownMenuItem>
+
           {/* <DropdownMenuItem>
             <Keyboard className="mr-2 h-4 w-4" />
             <span>Keyboard shortcuts</span>

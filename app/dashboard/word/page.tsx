@@ -3,7 +3,7 @@ import { hsk } from "@/lib/data";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Fragment } from "react";
-import DeleteWordButton from "@/components/BTN/DeleteWordBtn";
+import DeleteWordButton from "@/components/btn/DeleteWordBtn";
 import { CiEdit } from "react-icons/ci";
 
 export default async function Word({
@@ -121,9 +121,9 @@ export default async function Word({
                     </Link>
                   </div>
                   <div>
-                    <Button variant={"ghost"} className={`text-lg pinyin`}>
+                    <span className={`pinyin`}>
                       {currentPage}/{allPage}
-                    </Button>
+                    </span>
                   </div>
                   <div className="flex gap-2 items-center">
                     <Link

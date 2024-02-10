@@ -36,7 +36,7 @@ export default function Navbar() {
       <div
         className={`max-w-screen-xl h-16 px-2 flex justify-between items-center mx-auto`}
       >
-        <p className={`text-lg guoyu text-blue-500`}>{"中柬词典"}</p>
+        <p className={`text-lg guoyu text-violet-500`}>{"中柬词典"}</p>
         <div className={`hidden md:flex gap-3`}>
           <div className="hidden lg:block">
             <ModeToggle />

@@ -83,7 +83,7 @@ export default function EditSentenceForm({ sentence }: { sentence: Sentence }) {
                 value={segm.pinyin}
                 name="pinyin"
                 className={`w-fit text-sm flex-1 pinyin placeholder:text-base`}
-                placeholder="ចិន"
+                placeholder="ស្រៈប្រកប"
                 onChange={(event) => changeSegment(event, index)}
               />
               <Button
@@ -99,7 +99,7 @@ export default function EditSentenceForm({ sentence }: { sentence: Sentence }) {
               value={segm.chinese}
               name="chinese"
               className={`w-fit text-lg guoyu placeholder:text-base`}
-              placeholder="ស្រៈប្រកប"
+              placeholder="ចិន"
               onChange={(event) => changeSegment(event, index)}
             />
           </div>

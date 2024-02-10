@@ -18,8 +18,10 @@ interface Hsk {
 }
 
 interface Sentence {
-  id: number;
+  id: number?;
   khmer: string;
+  chinese:string[]
+  pinyin:string[]
   segment: Segment[];
 }
 interface Segment {
