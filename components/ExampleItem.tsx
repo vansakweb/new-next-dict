@@ -1,10 +1,7 @@
-// import PlayVoiceBtn from "@/components/Btn/PlayVoiceBtn";
-// import CopyTextBtn from "@/components/Btn/CopyTextBtn";
-// import EditSentenceBtn from "@/components/btn/EditSentenceBtn";
-// import ToggleSentenceBookMark from "@/components/Btn/ToggleSentenceBookMark";
-import PlayVoiceBtn from "./Btn/PlayVoiceBtn";
-import CopyTextBtn from "./Btn/CopyTextBtn";
-import ToggleSentenceBookMark from "./Btn/ToggleSentenceBookMark";
+import PlayVoiceBtn from "@/components/Btn/PlayVoiceBtn";
+import CopyTextBtn from "@/components/Btn/CopyTextBtn";
+// import EditSentenceBtn from "@/components/Btn/EditSentenceBtn";
+import ToggleSentenceBookMark from "@/components/Btn/ToggleSentenceBookMark";
 
 export default function ExampleItem({
   sentence,
