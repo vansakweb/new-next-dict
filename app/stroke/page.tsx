@@ -24,7 +24,7 @@ export default function StrokPage() {
         <Input
           value={inputText}
           onChange={(event) => filterInput(event.target.value)}
-          className={`h-10 w-full text-base placeholder:text-base`}
+          className={`h-10 w-full text-base placeholder:text-base pkc`}
           placeholder="ចិន"
         />
         {uniqeTextArray && inputText && <Stroke hanzhis={uniqeTextArray} />}

@@ -68,7 +68,7 @@ export default function Converter() {
           កម្មវិធីបម្លែងអក្សរ
         </Label>
         <Textarea
-          className={`text-lg resize-none rounded-md guoyu placeholder:text-base`}
+          className={`text-lg resize-none rounded-md guoyu placeholder:text-base pkc`}
           placeholder="ចិន"
           rows={5}
           // placeholder="បញ្ចូលអក្សរចិននៅទីនេះ"
@@ -78,15 +78,13 @@ export default function Converter() {
         ></Textarea>
       </div>
 
-      <div className="mt-10">
+      <div className="mt-10 px-1">
         <Label htmlFor="input" className={`text-lg battambang`}>
           លទ្ធផល
         </Label>
         <Textarea
-          disabled
-          className={`resize-none rounded-md ${
-            menu == "pinyin" ? "pinyin text-sm" : "text-lg guoyu"
-          }`}
+          // disabled
+          className={`resize-none rounded-md pkc text-lg`}
           rows={5}
           value={output}
         ></Textarea>

@@ -16,7 +16,10 @@ export default function WordList({ words }: { words: Hsk[] }) {
         .includes(chineseConv.sify(input?.replaceAll(" ", "") as string))
     );
     const english = words.filter((word) =>
-      word.english.join("").includes(input?.replaceAll(" ", "") as string)
+      word.english
+        .join("")
+        .toLowerCase()
+        .includes(input?.replaceAll(" ", "").toLowerCase() as string)
     );
     const khmer = words.filter((word) =>
       word.khmer.join("").includes(input?.replaceAll(" ", "") as string)
@@ -50,7 +53,7 @@ export default function WordList({ words }: { words: Hsk[] }) {
       <div className={`h-full flex flex-col gap-2 guoyu`}>
         <div className={`h-fit`}>
           <Input
-            className={`h-10 text-xl placeholder:text-base text-violet-500`}
+            className={`h-10 text-xl placeholder:text-base text-violet-500 pkc`}
             placeholder="ចិន,ខ្មែរ,អងក្លេស,ភីនអ៉ីន"
             onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
               setInput(event.target.value)
