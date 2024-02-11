@@ -11,7 +11,7 @@ export default function ExampleItem({
   chinese: string;
 }) {
   return (
-    <div className={`h-fit`}>
+    <div className={`h-fit w-full`}>
       <div
         className={`pr-2 flex gap-2 justify-between border shadow-md rounded-md overflow-hidden`}
       >
