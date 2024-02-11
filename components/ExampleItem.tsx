@@ -35,11 +35,11 @@ export default function ExampleItem({
           >
             {sentence.khmer}
           </p>
-          <div className={`flex gap-1`}>
+          <div className={`flex gap-1 w-fit overflow-x-auto`}>
             {sentence?.segment.map((seg: any, index: number) => (
               <div
                 key={index}
-                className={`flex flex-col justify-between -hover:bg-slate-200 -dark:hover:bg-slate-800 rounded-md ${
+                className={`flex flex-col -hover:bg-slate-200 -dark:hover:bg-slate-800 rounded-md ${
                   seg.chinese == chinese
                     ? "bg-slate-100 dark:bg-slate-900 px-1"
                     : "dark:bg-slate-950"
