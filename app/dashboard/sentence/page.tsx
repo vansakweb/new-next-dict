@@ -5,7 +5,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { CiEdit } from "react-icons/ci";
-import DeleteSentenceButton from "@/components/btn/DeleteSentenceBtn";
+import DeleteSentenceButton from "@/components/Btn/DeleteSentenceBtn";
 
 interface User {
   id: number;
