@@ -30,39 +30,41 @@ export default function ExampleItem({
         <div
           className={`w-full py-3 flex-1 flex flex-col justify-between overflow-x-auto`}
         >
-          <pre
-            className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap w-fit`}
-          >
-            {sentence.khmer}
-          </pre>
-          <div className={`flex gap-1 w-fit overflow-x-auto`}>
-            {sentence?.segment.map((seg: any, index: number) => (
-              <div
-                key={index}
-                className={`flex flex-col -hover:bg-slate-200 -dark:hover:bg-slate-800 rounded-md ${
-                  seg.chinese == chinese
-                    ? "bg-slate-100 dark:bg-slate-900 px-1"
-                    : "dark:bg-slate-950"
-                } ${
-                  index == 0
-                    ? "items-start"
-                    : sentence.segment.length - 1 == index
-                    ? "-items-end items-center"
-                    : "items-center"
-                }`}
-              >
-                <pre
-                  className={`pinyin text-sm text-orange-500 overflow-x-auto text-nowrap w-fit`}
+          <div className="flex-1 overflow-auto">
+            <pre
+              className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap w-fit`}
+            >
+              {sentence.khmer}
+            </pre>
+            <div className={`flex gap-1 w-fit overflow-x-auto`}>
+              {sentence?.segment.map((seg: any, index: number) => (
+                <div
+                  key={index}
+                  className={`flex flex-col -hover:bg-slate-200 -dark:hover:bg-slate-800 rounded-md ${
+                    seg.chinese == chinese
+                      ? "bg-slate-100 dark:bg-slate-900 px-1"
+                      : "dark:bg-slate-950"
+                  } ${
+                    index == 0
+                      ? "items-start"
+                      : sentence.segment.length - 1 == index
+                      ? "-items-end items-center"
+                      : "items-center"
+                  }`}
                 >
-                  {seg.pinyin}
-                </pre>
-                <pre
-                  className={`guoyu text-xl text-violet-500 overflow-x-auto text-nowrap w-fit`}
-                >
-                  {seg.chinese}
-                </pre>
-              </div>
-            ))}
+                  <pre
+                    className={`pinyin text-sm text-orange-500 overflow-x-auto text-nowrap w-fit`}
+                  >
+                    {seg.pinyin}
+                  </pre>
+                  <pre
+                    className={`guoyu text-xl text-violet-500 overflow-x-auto text-nowrap w-fit`}
+                  >
+                    {seg.chinese}
+                  </pre>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
