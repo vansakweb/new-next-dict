@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Input } from "./ui/input";
+import { Input } from "@/components/ui/input";
 import { useMemo, useState } from "react";
 import { useShowContext } from "@/contexts/Show";
 var chineseConv = require("chinese-conv");

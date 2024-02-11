@@ -1,6 +1,6 @@
 "use client";
 import { CiMedicalClipboard } from "react-icons/ci";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function CopyTextBtn({ text }: { text: string }) {
   const copy = () => {

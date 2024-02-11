@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { CiEdit } from "react-icons/ci";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 export default function EditSentenceBtn({
   sentenceId,

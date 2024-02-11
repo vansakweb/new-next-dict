@@ -1,7 +1,7 @@
 "use client";
 
 import { PiStarFill } from "react-icons/pi";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 import { useBookMarkContextContext } from "@/contexts/Bookmark";
 
 export default function RemoveHskBookmarkBtn({ hskId }: { hskId: number }) {

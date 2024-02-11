@@ -1,7 +1,7 @@
 import PlayVoiceBtn from "@/components/btn/PlayVoiceBtn";
 import CopyTextBtn from "@/components/btn/CopyTextBtn";
-import EditSentenceBtn from "./btn/EditSentenceBtn";
-import ToggleSentenceBookMark from "./btn/ToggleSentenceBookMark";
+// import EditSentenceBtn from "@/components/btn/EditSentenceBtn";
+import ToggleSentenceBookMark from "@/components/btn/ToggleSentenceBookMark";
 
 export default function ExampleItem({
   sentence,
