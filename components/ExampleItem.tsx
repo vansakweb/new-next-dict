@@ -29,11 +29,11 @@ export default function ExampleItem({
         </div>
         <div className={`w-full flex-1 flex overflow-x-auto`}>
           <div className="flex-1 flex py-3 flex-col justify-between overflow-auto">
-            <p
+            <pre
               className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap w-fit`}
             >
               {sentence.khmer}
-            </p>
+            </pre>
             <div className={`flex gap-1 w-fit overflow-x-auto`}>
               {sentence?.segment.map((seg: any, index: number) => (
                 <div

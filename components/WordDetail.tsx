@@ -57,9 +57,9 @@ export default function WordDetail({
                   (item, index) =>
                     item && (
                       <Fragment key={index}>
-                        <span className={`text-sm pinyin text-orange-500`}>
+                        <pre className={`text-sm pinyin text-orange-500`}>
                           {item && item}
-                        </span>
+                        </pre>
                         {index < word?.pinyin.length - 1 && (
                           <span className="h-4 border-r"></span>
                         )}
@@ -84,9 +84,9 @@ export default function WordDetail({
                           size={16}
                           className=" text-violet-500"
                         /> */}
-                          <span className={`text-lg battambang text-blue-500`}>
+                          <pre className={`text-lg battambang text-blue-500`}>
                             {item && item}
-                          </span>
+                          </pre>
                         </div>
                         {index < word?.khmer.length - 1 && (
                           <span className="h-6 border-r"></span>
@@ -109,9 +109,9 @@ export default function WordDetail({
                           size={16}
                           className=" text-violet-500"
                         /> */}
-                          <span className={`text-base pinyin text-green-500`}>
+                          <pre className={`text-base pinyin text-green-500`}>
                             {item && item}
-                          </span>
+                          </pre>
                         </div>
                         {index < word?.english.length - 1 && (
                           <span className="h-6 border-r"></span>
