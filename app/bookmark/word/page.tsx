@@ -4,7 +4,7 @@ import { Fragment } from "react";
 
 import { useBookMarkContextContext } from "@/contexts/Bookmark";
 import ExampleItem from "@/components/ExampleItem";
-import ToggleBookMark from "@/components/Btn/ToggleSentenceBookMark";
+import ToggleBookMark from "@/components/ToggleSentenceBookMark";
 import Link from "next/link";
 
 export default function WordBookmark() {

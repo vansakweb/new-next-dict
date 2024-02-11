@@ -1,7 +1,7 @@
 "use client";
 import { useBookMarkContextContext } from "@/contexts/Bookmark";
-import AddSentenceBookmarkBtn from "@/components/Btn/AddSentenceBookmarkBtn";
-import RemoveSentenceBookmarkBtn from "@/components/Btn/RemoveSentenceBookmarkBtn";
+import AddSentenceBookmarkBtn from "@/components/AddSentenceBookmarkBtn";
+import RemoveSentenceBookmarkBtn from "@/components/RemoveSentenceBookmarkBtn";
 import { Fragment } from "react";
 
 export default function ToggleSentenceBookMark({
