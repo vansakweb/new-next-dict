@@ -9,7 +9,7 @@ export default function BackBtn({
 }) {
   return (
     <Button size={"icon"} variant={"ghost"} onClick={() => setShow(false)}>
-      <IoIosArrowBack size={20} />
+      <IoIosArrowBack size={20} className="text-red-500" />
     </Button>
   );
 }

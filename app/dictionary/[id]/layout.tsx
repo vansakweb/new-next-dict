@@ -14,13 +14,15 @@ export async function generateMetadata(
   const previousImages = (await parent).openGraph?.images || [];
 
   return {
-    title: `${word?.chinese} ${word?.chinese && "|"}
-    ${word?.pinyin[0]} ${word?.pinyin[0] && "|"}
-    ${word?.khmer[0]} ${word?.khmer[0] && "|"}
-    ${word?.english[0]}`,
+    title: `${word?.chinese} ${word?.chinese && "|"} ${word?.pinyin[0]} ${
+      word?.pinyin[0] && "|"
+    } ${word?.khmer[0]} ${word?.khmer[0] && "|"} ${word?.english[0]}`,
     // description: `${word?.chinese}:${word?.pinyin} \n ${word?.khmer} \n ${word?.english} `,
     openGraph: {
-      images: ["favicon.png", ...previousImages],
+      images: [
+        "https://new-next-dict.vercel.app/favicon.png",
+        ...previousImages,
+      ],
     },
   };
 }
