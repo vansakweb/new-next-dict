@@ -44,7 +44,7 @@ export default async function Sentence({
   return (
     <section className={`overflow-auto battambang`}>
       <div className="border border-slate-600/20 rounded-md overflow-hidden">
-        <table className="w-full mx-auto">
+        <table className="w-full mx-auto font-light">
           <thead className="bg-slate-300 dark:bg-slate-700">
             <tr>
               <th className="w-1/12 py-2 pl-4 battambang text-start">#</th>
