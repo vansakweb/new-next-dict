@@ -28,9 +28,11 @@ export default function ExampleItem({
           {/* <EditSentenceBtn sentenceId={sentence.id as number} /> */}
         </div>
         <div
-          className={`flex-1 flex flex-col gap-4 justify-center overflow-x-auto`}
+          className={`flex-1 flex flex-col gap-4 justify-center overflow-x-auto text-nowrap`}
         >
-          <p className={`battambang text-lg text-blue-500 text-nowrap`}>
+          <p
+            className={`battambang text-lg text-blue-500 text-nowrap overflow-x-auto`}
+          >
             {sentence.khmer}
           </p>
           <div className={`flex gap-1`}>
@@ -49,10 +51,14 @@ export default function ExampleItem({
                     : " items-center"
                 }`}
               >
-                <p className={`pinyin text-sm text-orange-500 text-nowrap`}>
+                <p
+                  className={`pinyin text-sm text-orange-500 text-nowrap overflow-x-auto`}
+                >
                   {seg.pinyin}
                 </p>
-                <p className={`guoyu text-xl text-violet-500 text-nowrap`}>
+                <p
+                  className={`guoyu text-xl text-violet-500 text-nowrap overflow-x-auto`}
+                >
                   {seg.chinese}
                 </p>
               </div>
