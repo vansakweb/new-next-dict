@@ -5,12 +5,14 @@ import { Fragment } from "react";
 import { useEffect } from "react";
 
 import { useShowContext } from "@/contexts/Show";
-import EditWordBtn from "@/components/Btn/EditWordBtn";
-import PlayVoiceBtn from "@/components/Btn/PlayVoiceBtn";
+// import EditWordBtn from "@/components/Btn/EditWordBtn";
+// import PlayVoiceBtn from "@/components/Btn/PlayVoiceBtn";
 import ExampleItem from "@/components/ExampleItem";
 
 import BackBtn from "@/components/Btn/BackBtn";
 import ToggleHskBookMark from "@/components/Btn/ToggleHskBookMark";
+import EditWordBtn from "./Btn/EditWordBtn";
+import PlayVoiceBtn from "./Btn/PlayVoiceBtn";
 
 export default function WordDetail({
   word,
