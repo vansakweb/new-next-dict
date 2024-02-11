@@ -30,11 +30,11 @@ export default function ExampleItem({
         <div
           className={`w-full py-3 flex-1 flex flex-col justify-between overflow-x-auto`}
         >
-          <p
+          <pre
             className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap w-fit`}
           >
             {sentence.khmer}
-          </p>
+          </pre>
           <div className={`flex gap-1 w-fit overflow-x-auto`}>
             {sentence?.segment.map((seg: any, index: number) => (
               <div
@@ -51,16 +51,16 @@ export default function ExampleItem({
                     : "items-center"
                 }`}
               >
-                <p
+                <pre
                   className={`pinyin text-sm text-orange-500 overflow-x-auto text-nowrap w-fit`}
                 >
                   {seg.pinyin}
-                </p>
-                <p
+                </pre>
+                <pre
                   className={`guoyu text-xl text-violet-500 overflow-x-auto text-nowrap w-fit`}
                 >
                   {seg.chinese}
-                </p>
+                </pre>
               </div>
             ))}
           </div>
