@@ -20,7 +20,7 @@ export async function generateMetadata(
     // description: `${word?.chinese}:${word?.pinyin} \n ${word?.khmer} \n ${word?.english} `,
     openGraph: {
       images: [
-        "https://new-next-dict.vercel.app/favicon.png",
+        "https://new-next-dict.vercel.app/favicon.gif",
         ...previousImages,
       ],
     },

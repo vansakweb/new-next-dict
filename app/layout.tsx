@@ -6,6 +6,9 @@ import Providers from "@/provider/Providers";
 export const metadata: Metadata = {
   title: "CH KH DICT",
   description: "",
+  openGraph: {
+    images: ["https://new-next-dict.vercel.app/favicon.png"],
+  },
 };
 
 export default function RootLayout({
