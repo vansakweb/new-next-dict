@@ -93,7 +93,7 @@
 
 @font-face {
   font-family: pinyin;
-  src: url(../fonts/Source_Han_Sans_CN_Light.otf);
+  src: url(../fonts/GentiumBasic_Italic.ttf);
 }
 .pinyin {
   font-family: "pinyin","battambang"

@@ -28,14 +28,14 @@ export default function ExampleItem({
           {/* <EditSentenceBtn sentenceId={sentence.id as number} /> */}
         </div>
         <div
-          className={`flex-1 flex flex-col gap-4 justify-center overflow-x-auto text-nowrap`}
+          className={`w-full flex-1 flex flex-col justify-between overflow-x-auto`}
         >
           <p
-            className={`battambang text-lg text-blue-500 text-nowrap overflow-x-auto`}
+            className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap`}
           >
             {sentence.khmer}
           </p>
-          <div className={`flex gap-1`}>
+          <div className={`flex gap-1 pb-4`}>
             {sentence?.segment.map((seg: any, index: number) => (
               <div
                 key={index}
@@ -47,17 +47,17 @@ export default function ExampleItem({
                   index == 0
                     ? "items-start"
                     : sentence.segment.length - 1 == index
-                    ? " items-end"
-                    : " items-center"
+                    ? "-items-end items-center"
+                    : "items-center"
                 }`}
               >
                 <p
-                  className={`pinyin text-sm text-orange-500 text-nowrap overflow-x-auto`}
+                  className={`pinyin text-sm text-orange-500 overflow-x-auto text-nowrap`}
                 >
                   {seg.pinyin}
                 </p>
                 <p
-                  className={`guoyu text-xl text-violet-500 text-nowrap overflow-x-auto`}
+                  className={`guoyu text-xl text-violet-500 overflow-x-auto text-nowrap`}
                 >
                   {seg.chinese}
                 </p>
