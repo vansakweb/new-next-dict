@@ -51,8 +51,8 @@ export default function WordDetail({
                 </>
               )}
             </p>
-            <div className={`flex flex-nowrap items-center gap-1`}>
-              <div className="flex-1 overflow-auto">
+            <div className={`flex flex-nowrap`}>
+              <div className="flex-1 flex flex-nowrap gap-1 items-center overflow-auto">
                 {word?.pinyin?.map(
                   (item, index) =>
                     item && (
@@ -73,10 +73,8 @@ export default function WordDetail({
             <ToggleHskBookMark hsk={word} />
           </div>
           {word?.khmer.length > 0 && (
-            <div
-              className={`w-full flex flex-nowrap gap-2 items-center overflow-auto`}
-            >
-              <div className="flex-1 overflow-auto">
+            <div className={`w-full flex overflow-auto`}>
+              <div className="flex-1 flex flex-nowrap gap-2 items-center  overflow-auto">
                 {word?.khmer?.map(
                   (item, index) =>
                     item && (
@@ -100,11 +98,8 @@ export default function WordDetail({
             </div>
           )}
           {word.english.length > 0 && (
-            <div
-              className={`w-full flex flex-nowrap gap-2 items-center overflow-auto`}
-            >
-              {" "}
-              <div className="flex-1 overflow-auto">
+            <div className={`w-full flex overflow-auto`}>
+              <div className="flex-1 flex flex-nowrap gap-2 items-center overflow-auto">
                 {word?.english?.map(
                   (item, index) =>
                     item && (

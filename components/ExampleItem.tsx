@@ -27,15 +27,13 @@ export default function ExampleItem({
           <ToggleSentenceBookMark sentence={sentence} />
           {/* <EditSentenceBtn sentenceId={sentence.id as number} /> */}
         </div>
-        <div
-          className={`w-full py-3 flex-1 flex flex-col justify-between overflow-x-auto`}
-        >
-          <div className="flex-1 overflow-auto">
-            <pre
+        <div className={`w-full flex-1 flex overflow-x-auto`}>
+          <div className="flex-1 flex py-3 flex-col justify-between overflow-auto">
+            <p
               className={`battambang text-lg text-blue-500 overflow-x-auto text-nowrap w-fit`}
             >
               {sentence.khmer}
-            </pre>
+            </p>
             <div className={`flex gap-1 w-fit overflow-x-auto`}>
               {sentence?.segment.map((seg: any, index: number) => (
                 <div
