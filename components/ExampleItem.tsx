@@ -13,7 +13,7 @@ export default function ExampleItem({
   return (
     <div className={`h-fit w-full`}>
       <div
-        className={`pr-2 flex gap-2 justify-between border shadow-md rounded-md overflow-hidden`}
+        className={`w-full pr-2 flex gap-2 justify-between border shadow-md rounded-md overflow-hidden`}
       >
         <div
           className={`w-fit p-1 flex flex-col gap-0 bg-slate-100 dark:bg-slate-900`}
