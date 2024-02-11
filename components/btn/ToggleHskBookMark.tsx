@@ -1,8 +1,8 @@
 "use client";
 import { useBookMarkContextContext } from "@/contexts/Bookmark";
 import { Fragment } from "react";
-import AddHskBookmarkBtn from "@/components/AddHskBookmarkBtn";
-import RemoveHskBookmarkBtn from "@/components/RemoveHskBookmarkBtn";
+import AddHskBookmarkBtn from "@/components/btn/AddHskBookmarkBtn";
+import RemoveHskBookmarkBtn from "@/components/btn/RemoveHskBookmarkBtn";
 
 export default function ToggleHskBookMark({ hsk }: { hsk: Hsk }) {
   const { hsks } = useBookMarkContextContext();

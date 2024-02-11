@@ -5,7 +5,7 @@ import { Fragment } from "react";
 
 import { useBookMarkContextContext } from "@/contexts/Bookmark";
 import ExampleItem from "@/components/ExampleItem";
-import ToggleBookMark from "@/components/ToggleSentenceBookMark";
+import ToggleBookMark from "@/components/btn/ToggleSentenceBookMark";
 
 export default function SentenceBookmark() {
   //   convert();

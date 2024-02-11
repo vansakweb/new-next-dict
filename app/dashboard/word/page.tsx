@@ -3,7 +3,7 @@ import { hsk } from "@/lib/data";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Fragment } from "react";
-import DeleteWordButton from "@/components/DeleteWordBtn";
+import DeleteWordButton from "@/components/btn/DeleteWordBtn";
 import { CiEdit } from "react-icons/ci";
 
 export default async function Word({
