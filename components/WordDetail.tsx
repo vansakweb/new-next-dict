@@ -103,25 +103,28 @@ export default function WordDetail({
             <div
               className={`w-full flex flex-nowrap gap-2 items-center overflow-auto`}
             >
-              {word?.english?.map(
-                (item, index) =>
-                  item && (
-                    <Fragment key={index}>
-                      <div className="flex gap-0.5 items-center py-1 px-2 rounded-md bg-slate-100 dark:bg-slate-900">
-                        {/* <BsFillPatchCheckFill
+              {" "}
+              <div className="flex-1 overflow-auto">
+                {word?.english?.map(
+                  (item, index) =>
+                    item && (
+                      <Fragment key={index}>
+                        <div className="flex gap-0.5 items-center py-1 px-2 rounded-md bg-slate-100 dark:bg-slate-900">
+                          {/* <BsFillPatchCheckFill
                           size={16}
                           className=" text-violet-500"
                         /> */}
-                        <span className={`text-base pinyin text-green-500`}>
-                          {item && item}
-                        </span>
-                      </div>
-                      {index < word?.english.length - 1 && (
-                        <span className="h-6 border-r"></span>
-                      )}
-                    </Fragment>
-                  )
-              )}
+                          <span className={`text-base pinyin text-green-500`}>
+                            {item && item}
+                          </span>
+                        </div>
+                        {index < word?.english.length - 1 && (
+                          <span className="h-6 border-r"></span>
+                        )}
+                      </Fragment>
+                    )
+                )}
+              </div>
             </div>
           )}
         </div>
