@@ -43,24 +43,30 @@ export default function WordDetail({
           <div className={`flex gap-1 justify-center items-center`}>
             <p className={`guoyu text-xl text-violet-500`}>
               {word?.chinese}
-              {"〔"}
-              {chineseConv.tify(word?.chinese)}
-              {"〕"}
+              {word?.chinese != chineseConv.tify(word?.chinese) && (
+                <>
+                  {"〔"}
+                  {chineseConv.tify(word?.chinese)}
+                  {"〕"}
+                </>
+              )}
             </p>
             <div className={`flex flex-nowrap items-center gap-1`}>
-              {word?.pinyin?.map(
-                (item, index) =>
-                  item && (
-                    <Fragment key={index}>
-                      <span className={`text-sm pinyin text-orange-500`}>
-                        {item && item}
-                      </span>
-                      {index < word?.pinyin.length - 1 && (
-                        <span className="h-4 border-r"></span>
-                      )}
-                    </Fragment>
-                  )
-              )}
+              <div className="flex-1 overflow-auto">
+                {word?.pinyin?.map(
+                  (item, index) =>
+                    item && (
+                      <Fragment key={index}>
+                        <span className={`text-sm pinyin text-orange-500`}>
+                          {item && item}
+                        </span>
+                        {index < word?.pinyin.length - 1 && (
+                          <span className="h-4 border-r"></span>
+                        )}
+                      </Fragment>
+                    )
+                )}
+              </div>
             </div>
             <PlayVoiceBtn text={word?.chinese as string} />
             <EditWordBtn wordId={word.id} />
@@ -70,25 +76,27 @@ export default function WordDetail({
             <div
               className={`w-full flex flex-nowrap gap-2 items-center overflow-auto`}
             >
-              {word?.khmer?.map(
-                (item, index) =>
-                  item && (
-                    <Fragment key={index}>
-                      <div className="flex gap-1 items-center py-1 px-2 rounded-md bg-slate-100 dark:bg-slate-900">
-                        {/* <BsFillPatchCheckFill
+              <div className="flex-1 overflow-auto">
+                {word?.khmer?.map(
+                  (item, index) =>
+                    item && (
+                      <Fragment key={index}>
+                        <div className="flex gap-1 items-center py-1 px-2 rounded-md bg-slate-100 dark:bg-slate-900">
+                          {/* <BsFillPatchCheckFill
                           size={16}
                           className=" text-violet-500"
                         /> */}
-                        <span className={`text-lg battambang text-blue-500`}>
-                          {item && item}
-                        </span>
-                      </div>
-                      {index < word?.khmer.length - 1 && (
-                        <span className="h-6 border-r"></span>
-                      )}
-                    </Fragment>
-                  )
-              )}
+                          <span className={`text-lg battambang text-blue-500`}>
+                            {item && item}
+                          </span>
+                        </div>
+                        {index < word?.khmer.length - 1 && (
+                          <span className="h-6 border-r"></span>
+                        )}
+                      </Fragment>
+                    )
+                )}
+              </div>
             </div>
           )}
           {word.english.length > 0 && (
